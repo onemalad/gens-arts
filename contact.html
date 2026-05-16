@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Order — Gen's Arts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html">gens<span>.</span>arts</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Order</a>
+  </nav>
+</header>
+
+<section class="contact">
+  <div>
+    <p class="eyebrow">Place an order</p>
+    <h1>Let&rsquo;s make something.</h1>
+    <p class="lede">
+      Share a few details and we&rsquo;ll get back to you within a day or two
+      with scents, sizes, pricing and a sample mockup. Bulk orders for
+      communions and weddings welcome.
+    </p>
+    <ul class="links">
+      <li><strong>WhatsApp</strong> <a href="https://wa.me/918454020425" target="_blank" rel="noopener">+91 84540 20425</a></li>
+      <li><strong>Instagram</strong> <a href="https://www.instagram.com/gens.arts/" target="_blank" rel="noopener">@gens.arts</a></li>
+      <li><strong>Lead time</strong> 7&ndash;14 days</li>
+    </ul>
+  </div>
+
+  <form class="form" id="orderForm">
+    <label>Your name
+      <input name="name" type="text" required />
+    </label>
+    <label>What would you like?
+      <select name="product">
+        <option>Resin photo frame / name light</option>
+        <option>Resin jewellery (earrings / bracelet / necklace)</option>
+        <option>Scented jar candle</option>
+        <option>Baptism / communion return favours</option>
+        <option>Wedding return favours</option>
+        <option>Christmas / festive candles</option>
+        <option>Personalised gift (keychain / mug / phone case)</option>
+        <option>Something else</option>
+      </select>
+    </label>
+    <label>Approx. quantity
+      <input name="quantity" type="text" placeholder="e.g. 50 pieces, or just 1" />
+    </label>
+    <label>Needed by (date)
+      <input name="date" type="text" placeholder="e.g. 10 June 2026" />
+    </label>
+    <label>Tell us more
+      <textarea name="message" rows="5" placeholder="Names, dates, colours, scent preferences, reference photos&hellip;" required></textarea>
+    </label>
+    <button type="submit" class="btn wa">Send enquiry on WhatsApp</button>
+    <p class="fine">Tapping submit opens WhatsApp with your details ready to send to <strong>+91 84540 20425</strong>.</p>
+  </form>
+</section>
+
+<footer class="foot">
+  <div>&copy; <span id="yr"></span> Gen&rsquo;s Arts &mdash; handmade with care.</div>
+  <div class="socials">
+    <a href="https://wa.me/918454020425" target="_blank" rel="noopener" class="wa">WhatsApp</a>
+    <a href="https://www.instagram.com/gens.arts/" target="_blank" rel="noopener">Instagram</a>
+    <a href="contact.html">Order</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

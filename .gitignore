@@ -1,0 +1,29 @@
+# claude code workspace metadata
+.claude/
+
+# os junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+ehthumbs.db
+
+# editor noise
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# build artefacts / archives
+*.zip
+*.tar
+*.tar.gz
+
+# logs
+*.log
+npm-debug.log*
+
+# env files (just in case anything is added later)
+.env
+.env.local
+.env.*.local
