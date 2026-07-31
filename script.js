@@ -94,9 +94,9 @@ const PREVIEW = location.search.includes("preview");
       <button class="toast-close" aria-label="Dismiss">&times;</button>
       <p class="toast-kicker">Have a date in mind?</p>
       <p class="toast-body">
-        Baptism, communion and wedding candles get booked weeks ahead.
-        Send us the date and we&rsquo;ll confirm we can make it &mdash; and share
-        a mockup before you pay a rupee.
+        Tell us when your baptism, communion or wedding is and we&rsquo;ll
+        confirm we can have it ready in time &mdash; with a mockup to approve
+        before you pay a rupee.
       </p>
       <a href="${WA}" target="_blank" rel="noopener" class="btn small wa">Check my date</a>`;
     document.body.appendChild(t);
