@@ -174,6 +174,7 @@ a:hover{color:var(--accent)}
   padding:10px 4px 12px;
 }
 .more{text-align:center;margin-top:30px}
+.more .btn{margin:0 5px 8px}
 
 /* ---------- quote ---------- */
 .quote{
@@ -419,6 +420,201 @@ a:hover{color:var(--accent)}
 .socials a.wa{color:#1ebe58}
 .socials a.wa:hover{color:#168f43}
 
+/* ---------- announcement bar ---------- */
+.annbar{
+  background:var(--ink);
+  color:var(--bg);
+  font-size:12.5px;
+  letter-spacing:.08em;
+  text-align:center;
+  padding:10px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.annbar strong{font-weight:500}
+.annbar a{
+  color:var(--bg);
+  border-bottom:1px solid rgba(251,244,234,.45);
+  padding-bottom:1px;
+  text-transform:uppercase;
+  font-size:11px;
+  letter-spacing:.14em;
+}
+.annbar a:hover{color:var(--accent);border-color:var(--accent)}
+.annbar .dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent);
+  flex:0 0 auto;
+  animation:glow 2.4s ease-in-out infinite;
+}
+@keyframes glow{
+  0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(181,131,99,.6)}
+  50%{opacity:.55;box-shadow:0 0 0 5px rgba(181,131,99,0)}
+}
+
+/* ---------- open-for-orders popup ---------- */
+body.no-scroll{overflow:hidden}
+.popup{
+  position:fixed;inset:0;z-index:60;
+  background:rgba(31,26,23,.68);
+  backdrop-filter:blur(3px);
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+  animation:fade .35s ease both;
+}
+.popup[hidden]{display:none}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+.popup-card{
+  position:relative;
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  width:min(880px,100%);
+  max-height:88vh;
+  background:var(--bg);
+  border:1px solid var(--line);
+  box-shadow:0 40px 80px -30px rgba(31,26,23,.55);
+  overflow:hidden;
+  animation:pop .45s cubic-bezier(.2,.8,.3,1) both;
+}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+
+.popup-art{background:var(--bg-soft);overflow:hidden}
+.popup-art img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+
+.popup-copy{
+  padding:38px 40px;
+  overflow-y:auto;
+}
+.popup-copy h2{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:clamp(32px,4vw,46px);
+  line-height:1.05;
+  margin:0 0 16px;
+}
+.popup-copy h2 em{color:var(--accent);font-style:italic}
+.popup-lede{
+  font-family:var(--serif);
+  font-size:18px;
+  color:var(--muted);
+  margin:0 0 20px;
+  max-width:36ch;
+}
+.popup-points{
+  list-style:none;
+  margin:0 0 26px;
+  padding:18px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  font-size:13px;
+  color:var(--muted);
+  display:grid;
+  gap:8px;
+}
+.popup-points li{position:relative;padding-left:20px}
+.popup-points li::before{
+  content:"\2661";
+  position:absolute;left:0;top:-1px;
+  color:var(--accent);
+  font-size:14px;
+}
+.popup-cta{display:flex;gap:10px;flex-wrap:wrap}
+.popup-later{
+  display:block;
+  margin:18px 0 0;
+  padding:0;
+  border:0;background:transparent;
+  font:inherit;font-size:12px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);
+  cursor:pointer;
+}
+.popup-later:hover{color:var(--ink)}
+.popup-close{
+  position:absolute;top:10px;right:14px;z-index:2;
+  background:var(--bg);border:1px solid var(--line);
+  width:34px;height:34px;
+  font-size:24px;line-height:1;
+  color:var(--muted);
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.popup-close:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* ---------- follow-up toast ---------- */
+.toast{
+  position:fixed;
+  right:24px;bottom:24px;z-index:55;
+  width:min(340px,calc(100vw - 32px));
+  padding:22px 24px 24px;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-left:3px solid var(--accent);
+  box-shadow:0 26px 50px -24px rgba(31,26,23,.5);
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .4s ease,transform .4s cubic-bezier(.2,.8,.3,1);
+}
+.toast.in{opacity:1;transform:none}
+.toast-kicker{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:20px;
+  margin:0 0 8px;
+  color:var(--ink);
+}
+.toast-body{
+  font-size:13.5px;
+  line-height:1.6;
+  color:var(--muted);
+  margin:0 0 18px;
+}
+.toast-close{
+  position:absolute;top:8px;right:10px;
+  background:transparent;border:0;
+  font-size:22px;line-height:1;
+  color:var(--muted);
+  cursor:pointer;
+}
+.toast-close:hover{color:var(--ink)}
+
+/* ---------- home candles band ---------- */
+.band{
+  max-width:var(--max);
+  margin:70px auto;
+  padding:0 28px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:50px;
+  align-items:center;
+}
+.band-copy h2{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:clamp(32px,4vw,46px);
+  line-height:1.08;
+  margin:0 0 16px;
+}
+.band-copy h2 em{color:var(--accent);font-style:italic}
+.band-copy p{color:var(--muted);max-width:46ch;margin:0 0 24px}
+.band-art{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.band-art img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  border:1px solid var(--line);
+}
+.band-art img:first-child{transform:translateY(-14px)}
+.band-art img:last-child{transform:translateY(14px)}
+
 /* ---------- motion ---------- */
 figure,.hero-copy,.about-copy,.about-img,.hero-art{
   animation:rise .9s ease both;
@@ -438,6 +634,10 @@ figure,.hero-copy,.about-copy,.about-img,.hero-art{
   .masonry{columns:2 200px;column-gap:16px}
   .masonry figure{margin-bottom:16px}
   .press-list li{grid-template-columns:120px 1fr;gap:18px;font-size:17px}
+  .band{grid-template-columns:1fr;gap:34px}
+  .popup-card{grid-template-columns:1fr}
+  .popup-art{max-height:200px}
+  .popup-copy{padding:28px 26px}
 }
 
 @media (max-width:560px){
@@ -476,4 +676,17 @@ figure,.hero-copy,.about-copy,.about-img,.hero-art{
   .socials a{margin:0 10px}
   .lightbox{padding:20px}
   .lightbox .close{top:12px;right:16px;font-size:32px}
+  .annbar{font-size:11.5px;padding:9px 14px;gap:6px;letter-spacing:.05em}
+  .annbar a{font-size:10.5px;letter-spacing:.1em}
+  .popup{padding:14px}
+  .popup-card{max-height:92vh}
+  .popup-art{max-height:150px}
+  .popup-copy{padding:24px 20px}
+  .popup-lede{font-size:16px}
+  .popup-cta .btn{flex:1 1 100%;text-align:center}
+  .band{margin:40px auto;padding:0 18px;gap:26px}
+  .band-art img:first-child,.band-art img:last-child{transform:none}
+  .toast{right:12px;left:12px;bottom:12px;width:auto;padding:18px 20px 20px}
+  .toast-kicker{font-size:18px}
+  .toast .btn{display:block;text-align:center}
 }
