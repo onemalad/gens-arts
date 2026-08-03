@@ -39,7 +39,7 @@ A few values are hard-coded across files. Search-and-replace if they change:
 
 | Value | Where |
 |---|---|
-| WhatsApp number `918454020425` | `index.html`, `gallery.html`, `about.html`, `contact.html`, `script.js` |
+| WhatsApp number `919326198790` | `index.html`, `gallery.html`, `about.html`, `contact.html`, `script.js` |
 | Instagram URL `https://www.instagram.com/gens.arts/` | all four HTML files |
 | Colour palette | top of `styles.css` (`--bg`, `--ink`, `--accent`, `--muted`, `--line`) |
 

@@ -8,7 +8,7 @@ const PREVIEW = location.search.includes("preview");
 // --- "we're open for orders" announcement bar + one-time popup ---
 (() => {
   const KEY   = "ga_open_popup_v1";      // once per visit — the bar does the repeat reminding
-  const WA    = "https://wa.me/918454020425?text=" +
+  const WA    = "https://wa.me/919326198790?text=" +
                 encodeURIComponent("Hi Gen! I saw you're open for orders — I'd like to order a candle.");
 
   // slim bar, always on
@@ -79,7 +79,7 @@ const PREVIEW = location.search.includes("preview");
 // --- follow-up toast: a quieter second nudge, 2 min in ---
 (() => {
   const KEY  = "ga_toast_v1";
-  const WA   = "https://wa.me/918454020425?text=" +
+  const WA   = "https://wa.me/919326198790?text=" +
                encodeURIComponent("Hi Gen! We have an occasion coming up — can you check if the date is free?");
   if (sessionStorage.getItem(KEY) && !PREVIEW) return;
 
@@ -94,9 +94,9 @@ const PREVIEW = location.search.includes("preview");
       <button class="toast-close" aria-label="Dismiss">&times;</button>
       <p class="toast-kicker">Have a date in mind?</p>
       <p class="toast-body">
-        Tell us when your baptism, communion or wedding is and we&rsquo;ll
-        confirm we can have it ready in time &mdash; with a mockup to approve
-        before you pay a rupee.
+        Personalised candles take 7&ndash;14 days. Tell us your date and
+        we&rsquo;ll confirm we can have it ready &mdash; with a mockup to
+        approve before you pay a rupee.
       </p>
       <a href="${WA}" target="_blank" rel="noopener" class="btn small wa">Check my date</a>`;
     document.body.appendChild(t);
@@ -147,7 +147,7 @@ if (orderForm) {
       "Details:",
       (d.get("message") || "—"),
     ];
-    const url = "https://wa.me/918454020425?text=" +
+    const url = "https://wa.me/919326198790?text=" +
                 encodeURIComponent(lines.join("\n"));
     window.open(url, "_blank", "noopener");
   });
